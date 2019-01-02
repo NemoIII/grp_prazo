@@ -14,11 +14,6 @@ flpath = home + folder + flname
 
 # title = "CONSTITUIÇÃO DA REPÚBLICA FEDERATIVA DO BRASIL"
 
-
-def read_pdf():
-	pass
-	
-
 pdfFileObj = open(flpath, 'rb')
 
 pdfReader = PyPDF4.PdfFileReader(pdfFileObj)
@@ -60,6 +55,9 @@ def organization():
 
 	df = pd.DataFrame(data, columns=["TÍTULO", "CAPÍTULO", "Art. ", "SUB", "SEÇÂO"])
 	# df2 = read_pdf(flpath)
+	
+	df.to_csv("CFB_1988.csv")
+	pd.read_csv("CFB_1988.csv")
 	
 	print(df)
 	
