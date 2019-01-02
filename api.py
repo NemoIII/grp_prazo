@@ -58,8 +58,8 @@ def organization():
 		"SEÇÂO": [""]
 	}
 
-	# df = pd.DataFrame(data, columns=["TÍTULO", "CAPÍTULO", "Art. ", "SUB", "SEÇÂO"])
-	df = read_pdf(flpath)
+	df = pd.DataFrame(data, columns=["TÍTULO", "CAPÍTULO", "Art. ", "SUB", "SEÇÂO"])
+	# df2 = read_pdf(flpath)
 	
 	print(df)
 	
