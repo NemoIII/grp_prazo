@@ -25,24 +25,23 @@ page = ""
 while count < num_pages:
 	pageObj = pdfReader.getPage(count)
 	page += pageObj.extractText()
-
+	
 	if page != "":
 		page = page
 	else:
 		page = textract.process(flpath, method='tesseract', language='pt')
-
+	
 	if page == "TÍTULO" or "CAPÍTULO" or "Art. " or "SUB":
 		break
 	if page.endswith("SEÇÃO"):
 		break
-
+	
 	count += 1
-
+	
 	print(page)
 
 
 def organization():
-
 	# arq = open(flpath, 'rb')
 	
 	data = {
@@ -52,8 +51,8 @@ def organization():
 		"SUB": [""],
 		"SEÇÂO": [""]
 	}
-
-	df = pd.DataFrame(data, columns=["TÍTULO", "CAPÍTULO", "Art. ", "SUB", "SEÇÂO"])
+	
+	df = pd.DataFrame(data, index="L1 L2 L3 L4", columns="TÍTULO CAPÍTULO Art. SUB SEÇÂO".split())
 	# df2 = read_pdf(flpath)
 	
 	for text in df:
