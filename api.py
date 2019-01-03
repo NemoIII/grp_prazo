@@ -56,8 +56,13 @@ def organization():
 	df = pd.DataFrame(data, columns=["TÍTULO", "CAPÍTULO", "Art. ", "SUB", "SEÇÂO"])
 	# df2 = read_pdf(flpath)
 	
-	df.to_csv("CFB_1988.csv")
+	for text in df:
+		df.to_csv("CFB_1988.csv")
+	
 	pd.read_csv("CFB_1988.csv")
+	
+	
+	
 	
 	print(df)
 	
