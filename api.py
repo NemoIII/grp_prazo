@@ -57,12 +57,9 @@ def organization():
 	# df2 = read_pdf(flpath)
 	
 	for text in df:
-		df.to_csv("CFB_1988.csv")
+		return df.to_csv("CFB_1988.csv")
 	
 	pd.read_csv("CFB_1988.csv")
-	
-	
-	
 	
 	print(df)
 	
