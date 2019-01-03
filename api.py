@@ -59,11 +59,9 @@ def organization():
 	for text in df:
 		return df.to_csv("CFB_1988.csv")
 	
-	pd.read_csv("CFB_1988.csv")
+	# print(df)
 	
-	print(df)
-	
-	return organization()
+	return pd.read_csv("CFB_1988.csv")
 #
 #
 # def convertio():
