@@ -59,6 +59,7 @@ def organization():
 	for text in df:
 		return df.to_csv("CFB_1988.csv")
 	
+	print(list(map(data)))
 	# print(df)
 	
 	return pd.read_csv("CFB_1988.csv")
